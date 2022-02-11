@@ -1,0 +1,300 @@
+/* CSS */
+
+/* \\\\\\\\\\\\\\\\ RESET \\\\\\\\\\\\\\\\ */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* \\\\\\\\\\\\\\\\ COMMON \\\\\\\\\\\\\\\\ */
+
+body {
+	background:#000;
+	color:#FFF;
+	padding: 0 3rem 13rem 3rem; 
+}
+
+h1 {
+	font-family: 'Dela Gothic One', cursive;
+	font-size:3rem;
+	line-height: 1;
+	letter-spacing: -0.9px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+p {
+	font-family: 'Inter', sans-serif;
+	font-size: 1.125rem;
+	line-height: 1.5rem;
+}
+
+hr {
+	margin: 8rem 0 0 0;
+}
+
+/* \\\\\\\\\\\\\\\\ HEADER \\\\\\\\\\\\\\\\ */
+
+header{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 3rem;
+	margin-bottom: 13rem;
+
+	font-family: 'Dela Gothic One', cursive;
+	font-size: 2rem;
+	line-height: 1;
+	letter-spacing: -0.9px;
+	text-transform: uppercase;
+
+}
+
+nav a {
+	color:#FFF;
+	text-decoration: none;
+	margin-right: 2rem;
+}
+
+nav a:hover {
+	background:#C1FF91;
+	color: #000;
+}
+
+div.intro {
+	font-family: 'IBM Plex Mono', monospace;
+	font-size:3rem;
+	line-height: 4.5rem;
+}
+
+img.visual {
+	width: 100%;
+	margin-bottom: 8rem
+}
+
+
+/* \\\\\\\\\\\\\\\\ AGENDA & SPEAKERS & FOLLOW US \\\\\\\\\\\\\\\\ */
+
+section#agenda, section#speakers, section#followUs {
+	margin-top: 13rem;
+	scroll-behavior: smooth;
+}
+
+article.agendaList, article.speakersList{
+	display: grid;
+	margin-top: 8rem;
+}
+
+
+/* \\\\\\\\\\\\\\\\ AGENDA \\\\\\\\\\\\\\\\ */
+
+article.agendaList{
+	grid-template-columns: 33.3% 33.3% 33.3%;
+}
+
+
+article.event{
+	padding: 1rem 2rem 2rem 2rem;
+}
+
+div.meta {
+	display: flex;
+	align-items: center;
+	margin: 0.5rem 0;
+
+	font-family: 'IBM Plex Mono', monospace;
+	font-size: 1rem;
+	letter-spacing: -0.6px;
+}
+
+div.meta > div {
+	display: flex;
+	align-items: center;
+	margin-right: 2rem;
+}
+
+div.meta span {
+	margin-right: 0.5rem;
+}
+
+div.title {
+	font-family: 'Inter', sans-serif;
+	font-size: 1.5rem;
+	line-height: 2rem;
+	letter-spacing: -0.24px;
+	font-weight: 600;
+	margin: 1rem 0;
+}
+
+
+div.links{
+	margin: 2rem 0 0 0;
+}
+
+div.links > a {
+	align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    white-space: nowrap;
+
+	font-family: 'Inter', sans-serif;
+	font-size: 1.125rem;
+	line-height: 1.5rem;
+	padding: 1 rem 0rem;
+	color: #FFF;
+	text-decoration: none;
+}
+
+div.links > a:hover > span{
+	color:#000;
+	background: #C1FF91;
+}
+
+div.links > a > img {
+	margin-right: 0.5rem;
+}
+
+
+/* \\\\\\\\\\\\\\\\ SPEAKERS \\\\\\\\\\\\\\\\ */
+
+article.speakersList{
+	grid-template-columns: 25% 25% 25% 25%;
+}
+
+article.human{
+	text-align: center;
+	padding: 1rem 2rem 2rem 2rem;
+}
+
+
+article.human > img{
+	margin-bottom:1.5rem;
+}
+
+p.role {
+	opacity: 0.6;
+}
+
+
+/* \\\\\\\\\\\\\\\\ FOLLOW US \\\\\\\\\\\\\\\\ */
+
+article.followLogos{
+	text-align: center;
+	margin-top: 8rem;
+}
+
+
+/* \\\\\\\\\\\\\\\\ MEDIA QUERIES \\\\\\\\\\\\\\\\ */
+
+/* When the browser is 1024px or smaller */
+@media screen and (max-width: 1024px) {
+
+	body {
+		padding: 0 2rem 8rem 2rem;
+	}
+
+	header{
+		margin-top: 2rem;
+		margin-bottom: 8rem;
+	}
+
+	nav{
+		display: none;
+	}
+
+	div.intro {
+		font-size:2rem;
+		line-height: 3rem;
+	}
+
+	article.agendaList, article.speakersList {
+		margin-top: 8rem;
+		grid-template-columns: 50% 50%;
+	}
+}
+
+/* When the browser is 640px or smaller */
+@media screen and (max-width: 640px) {
+
+	body {
+		padding: 0 1rem 8rem 1rem;
+	}
+
+	hr {
+		margin: 5rem 0 0 0;
+	}
+
+	header{
+		margin-top: 1rem;
+		margin-bottom: 4rem;
+	}
+
+	h1 {
+		font-size:2rem;
+	}
+
+	div.intro {
+		font-size: 1.125rem;
+		line-height: 1.5rem;
+	}
+
+	img.visual {
+		margin-bottom: 4rem
+	}
+
+	section#agenda, section#speakers, section#followUs {
+		margin-top: 7rem;
+	}
+
+	article.agendaList, article.speakersList {
+		margin-top: 5rem;
+		grid-template-columns: auto;
+	}
+}
+
+
+
+
+
+
+
