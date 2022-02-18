@@ -57,6 +57,11 @@ body {
 	padding: 0 3rem 13rem 3rem; 
 }
 
+a {
+	text-decoration: none;
+	color:#FFF;
+}
+
 h1 {
 	font-family: 'Dela Gothic One', cursive;
 	font-size:3rem;
@@ -73,7 +78,7 @@ p {
 }
 
 hr {
-	margin: 8rem 0 0 0;
+	margin: 8rem 0 8rem 0;
 }
 
 /* \\\\\\\\\\\\\\\\ HEADER \\\\\\\\\\\\\\\\ */
@@ -104,10 +109,17 @@ nav a:hover {
 	color: #000;
 }
 
+/* \\\\\\\\\\\\\\\\ INTRO \\\\\\\\\\\\\\\\ */
+
 div.intro {
 	font-family: 'IBM Plex Mono', monospace;
 	font-size:3rem;
 	line-height: 4.5rem;
+}
+
+div.intro::after{
+	content:'_';
+	animation: blinker 0.8s infinite;
 }
 
 img.visual {
@@ -115,6 +127,12 @@ img.visual {
 	margin-bottom: 8rem
 }
 
+
+@keyframes blinker {
+	50% {
+	  opacity: 0;
+	}
+  }
 
 /* \\\\\\\\\\\\\\\\ AGENDA & SPEAKERS & FOLLOW US \\\\\\\\\\\\\\\\ */
 
@@ -147,6 +165,7 @@ div.meta {
 	font-family: 'IBM Plex Mono', monospace;
 	font-size: 1rem;
 	letter-spacing: -0.6px;
+	text-transform: uppercase;
 }
 
 div.meta > div {
@@ -168,9 +187,8 @@ div.title {
 	margin: 1rem 0;
 }
 
-
 div.links{
-	margin: 2rem 0 0 0;
+	margin: 2rem 0 2rem 0;
 }
 
 div.links > a {
@@ -196,6 +214,32 @@ div.links > a > img {
 	margin-right: 0.5rem;
 }
 
+div.avatars {
+	display: inline-block;
+	width: auto;
+	height: 40px;
+}
+
+div.avatars:hover > img.overlap {
+	margin-left: -0.5rem;
+}
+
+div.avatars:hover > img.overlap:first-child {
+	margin-left: -0.25rem;
+}
+
+img.overlap {
+	width: 40px;
+	height: 40px;
+	border: 4px solid #000;
+	margin-left:-1.5rem;
+	border-radius: 100%;
+	transition: all 0.5s ease-in-out;
+}
+
+img.overlap:first-child {
+	margin-left:-0.25rem;
+}
 
 /* \\\\\\\\\\\\\\\\ SPEAKERS \\\\\\\\\\\\\\\\ */
 
@@ -208,9 +252,25 @@ article.human{
 	padding: 1rem 2rem 2rem 2rem;
 }
 
-
-article.human > img{
+article.human > a > img{
 	margin-bottom:1.5rem;
+	width: 128px;
+}
+
+article.human:hover > a > img{
+	background: #C1FF91;
+}
+
+article.human:hover > a > div > p{
+	color: #000;
+	background: #C1FF91;
+	opacity: 1;
+}
+
+div.nameRole{
+	display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 p.role {
@@ -263,7 +323,7 @@ article.followLogos{
 	}
 
 	hr {
-		margin: 5rem 0 0 0;
+		margin: 5rem 0 5rem 0;
 	}
 
 	header{
@@ -288,15 +348,24 @@ article.followLogos{
 		margin-top: 7rem;
 	}
 
-	article.agendaList, article.speakersList {
+	article.agendaList {
 		margin-top: 5rem;
 		grid-template-columns: auto;
 	}
+
+	article.speakersList{
+		margin-top: 5rem;
+		grid-template-columns: 50% 50%;
+	} 
+	article.human {
+		padding: 1rem 0rem 2rem 0rem;
+	}
+	
+	article.human > a > img {
+		width: 6rem;
+	}
+
+	article.followLogos > a > img {
+		width: 5rem;
+	}
 }
-
-
-
-
-
-
-
