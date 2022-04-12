@@ -348,6 +348,14 @@ article.followLogos{
 		margin-top: 7rem;
 	}
 
+	article.event{
+		padding: 2rem 1rem;
+	}
+
+	div.meta > div {
+		margin-right: 1rem;
+	}
+
 	article.agendaList {
 		margin-top: 5rem;
 		grid-template-columns: auto;
